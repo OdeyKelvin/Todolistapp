@@ -1,38 +1,175 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: hsl(235, 21%, 11%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: url('./images/5559852.jpg') no-repeat left/cover fixed;
+    min-height: 50vh;
+    max-height: 50vh;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+    /* width: 100%; */
+    max-width: 700px;
+    min-width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Title {
+    color: white;
+    font-size: 45px;
+}
+
+.new-todo {
+    background-color: hsl(235, 24%, 19%);
+    height: 70px;
+    display: flex;
+    border-radius: 6px;
+    /* width: 70px; */
+    margin-top: 50px;
+}
+
+.new-todo-input {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.new-todo-input form {
+    flex-grow: 1;
+}
+
+.new-todo-input input {
+    width: 100px;
+    padding: 10px 0px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: hsl(234, 39%, 85%);
+    font-size: 13px;
+}
+
+.new-todo-input input::placeholder {
+    color: hsl(234, 14%, 35%);
+}
+
+.new-todo button {
+    padding: 10px 20px;
+}
+
+.check {
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-mark:hover {
+    background: linear-gradient(135deg, #55DDFF 0% #C058F3 100%);
+    border-color: inear-gradien(135deg, #55DDFF 0% #C058F3 100%);
+}
+
+.check-mark {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid hsl(237, 14%, 26%);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 8%;
+        min-width: 100%;
+    }
+}
+
+ul {
+    display: grid;
+    place-items: center;
+}
+
+li {
+    list-style: none;
+    width: 200px;
+    padding-top: 8px;
+    padding-left: 34px;
+    margin-bottom: -50px;
+    color: white;
+    font-family: monospace;
+    font-size: 15px;
+    background-color: hsl(225, 24%, 19%);
+    height: 35px;
+    margin-top: 42px;
+    border-radius: 6px;
+    display: flex;
+}
+
+button {
+    font-size: small;
+    background-color: rgb(199, 199, 209);
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.taskTodeletebtn {
+    margin-right: 60px;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 208px;
+    margin-bottom: 20px;
+    margin-top: -64px;
+}
+
+.checkbox input {
+    width: 20px;
+    margin-top: 0px;
+    height: 20px;
+    margin-right: 25px;
+}
+
+.taskToeditbtn {
+    margin-right: 10px;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 266px;
+    margin-bottom: 26px;
+    margin-top: -70px
+}
+
+.chekbox input {
+    height: 100px;
+    width: 60px;
+    left: 19;
+    font-size: small;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 65px;
+    margin-left: 5px;
 }
